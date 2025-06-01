@@ -126,7 +126,7 @@ def execute_query(query: str, params: Optional[Dict[str, Any]] = None, fetch_one
         else:
             rows = cursor.fetchall()
             columns = [col[0].lower() for col in cursor.description]
-            return [dict(zip(columns, row)] for row in rows]
+            return [dict(zip(columns, row)) for row in rows]
             
     except oracledb.DatabaseError as e:
         error_obj, = e.args
