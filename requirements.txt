@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+pydantic
+oracledb
+python-dotenv # Para carregar variáveis de ambiente localmentegi
